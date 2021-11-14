@@ -1,3 +1,3 @@
 # Starfish
 
-A description of this package.
+Array programming for Swift
