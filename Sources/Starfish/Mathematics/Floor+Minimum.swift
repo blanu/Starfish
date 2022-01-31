@@ -25,6 +25,21 @@ public func floor<F,T>(_ `as`: [F]) -> [T] where T: BinaryInteger, F: BinaryFloa
 }
 
 // Min
+public func minimum(_ a: Bool, _ b: Bool) -> Bool
+{
+    return a && b
+}
+
+public func minimum(_ a: [Bool]) -> Bool
+{
+    return a.reduce(true)
+    {
+        (partialResult: Bool, next: Bool) -> Bool in
+
+        return partialResult && next
+    }
+}
+
 public func minimum<T>(_ a: T, _ b: T) -> T where T: Comparable
 {
     return min(a, b)

@@ -14,7 +14,7 @@ public func magnitude<T>(_ a: T) -> T where T: SignedNumeric, T: Comparable
     return abs(a)
 }
 
-public func manitude<T>(_ `as`: [T]) -> [T] where T: SignedNumeric, T: Comparable
+public func magnitude<T>(_ `as`: [T]) -> [T] where T: SignedNumeric, T: Comparable
 {
     `as`.map
     {
@@ -25,7 +25,7 @@ public func manitude<T>(_ `as`: [T]) -> [T] where T: SignedNumeric, T: Comparabl
 }
 
 // Residue
-public func residue<T>(_ a: T, b: T) -> T where T: BinaryInteger
+public func residue<T>(_ a: T, _ b: T) -> T where T: BinaryInteger
 {
     return a % b
 }

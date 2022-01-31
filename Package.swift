@@ -5,16 +5,23 @@ import PackageDescription
 
 let package = Package(
     name: "Starfish",
+    platforms: [.macOS(.v10_15)],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "Starfish",
             targets: ["Starfish"]),
+        .library(
+            name: "StarfishSymbols",
+            targets: ["StarfishSymbols"]
+        )
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
         .package(url: "https://github.com/apple/swift-numerics", from: "1.0.1"),
+        .package(url: "https://github.com/OperatorFoundation/Gardener", branch: "main"),
+        .package(url: "https://github.com/OperatorFoundation/Abacus", branch: "main")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -22,10 +29,21 @@ let package = Package(
         .target(
             name: "Starfish",
             dependencies: [
+                "Gardener",
+                "Abacus",
+                .product(name: "Numerics", package: "swift-numerics")
+            ]),
+        .target(
+            name: "StarfishSymbols",
+            dependencies: [
+                "Starfish",
                 .product(name: "Numerics", package: "swift-numerics")
             ]),
         .testTarget(
             name: "StarfishTests",
             dependencies: ["Starfish"]),
+        .testTarget(
+            name: "StarfishSymbolsTests",
+            dependencies: ["StarfishSymbols"]),
     ]
 )

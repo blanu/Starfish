@@ -25,6 +25,21 @@ public func ceiling<F,T>(_ `as`: [F]) -> [T] where T: BinaryInteger, F: BinaryFl
 }
 
 // Max
+public func maximum(_ a: Bool, _ b: Bool) -> Bool
+{
+    return a || b
+}
+
+public func maximum(_ a: [Bool]) -> Bool
+{
+    return a.reduce(false)
+    {
+        (partialResult: Bool, next: Bool) -> Bool in
+
+        return partialResult || next
+    }
+}
+
 public func maximum<T>(_ a: T, _ b: T) -> T where T: Comparable
 {
     return max(a, b)
