@@ -8,7 +8,7 @@
 import Foundation
 import Numerics
 
-// Exponential
+// Factorial
 public func factorial<T>(_ a: T) -> T where T: BinaryInteger
 {
     let index = Int(a)

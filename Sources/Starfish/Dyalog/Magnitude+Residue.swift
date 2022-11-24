@@ -8,6 +8,9 @@
 import Foundation
 import Numerics
 
+import BigArray
+import BigNumber
+
 // Magnitude
 public func magnitude<T>(_ a: T) -> T where T: SignedNumeric, T: Comparable
 {

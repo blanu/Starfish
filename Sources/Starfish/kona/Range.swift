@@ -13,7 +13,7 @@ public func range<T>(_ x: [T]) -> [T] where T: Hashable
     let set = OrderedSet<T>()
     for value in x
     {
-        set.add(element: value)
+        set.add(value)
     }
 
     return set.array

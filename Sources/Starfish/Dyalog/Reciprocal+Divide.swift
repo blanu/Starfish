@@ -7,6 +7,9 @@
 
 import Numerics
 
+import BigArray
+import BigNumber
+
 // Reciprocal
 public func reciprocal<T,F>(_ a: T) -> F where T: BinaryInteger, F: FloatingPoint
 {

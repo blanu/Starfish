@@ -7,6 +7,8 @@
 
 import Numerics
 
+import BigArray
+
 // Ceiling
 public func ceiling<F,T>(_ a: F) -> T where T: BinaryInteger, F: BinaryFloatingPoint
 {

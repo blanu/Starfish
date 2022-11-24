@@ -7,6 +7,9 @@
 
 import Numerics
 
+import BigArray
+import BigNumber
+
 // Negate
 public func negate<T>(_ a: T) -> T where T: SignedNumeric
 {
@@ -86,3 +89,4 @@ public func minus<T>(_ `as`: [T], _ bs: [T]) -> [T] where T: AdditiveArithmetic
         return a - b
     }
 }
+

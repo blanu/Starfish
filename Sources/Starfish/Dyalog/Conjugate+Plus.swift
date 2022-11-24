@@ -7,6 +7,9 @@
 
 import Numerics
 
+import BigArray
+import BigNumber
+
 // Conjugate
 public func conjugate<T>(_ a: T) -> T where T: AdditiveArithmetic
 {

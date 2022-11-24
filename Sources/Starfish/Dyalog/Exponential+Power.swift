@@ -8,6 +8,9 @@
 import Foundation
 import Numerics
 
+import BigArray
+import BigNumber
+
 // Exponential
 public func exponential<T>(_ a: T) -> Double where T: BinaryInteger
 {
@@ -83,3 +86,5 @@ public func power<T>(_ `as`: [T], _ bs: [T]) -> [T] where T: BinaryInteger
         return power(a, b)
     }
 }
+
+

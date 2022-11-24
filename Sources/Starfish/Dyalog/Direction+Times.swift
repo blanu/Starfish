@@ -7,6 +7,9 @@
 
 import Numerics
 
+import BigArray
+import BigNumber
+
 // Direction
 public func direction<T>(_ a: T) -> T where T: BinaryInteger
 {
