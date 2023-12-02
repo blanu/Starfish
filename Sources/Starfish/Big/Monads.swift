@@ -99,6 +99,11 @@ public func direction<T>(_ xs: BigArray<T>) -> BigArray<BInt> where T: AdditiveA
     }
 }
 
+//public func enclose<T>(_ xs: BigArray<T>) -> BigArray<T> where T: AdditiveArithmetic
+//{
+//    return BigArray<T>(xs.array, shape: BigArray<BInt>([xs]))
+//}
+
 public func exponential(_ xs: BigArray<BInt>) -> BigArray<BDouble>
 {
     let e = BDouble(2.718281828)
