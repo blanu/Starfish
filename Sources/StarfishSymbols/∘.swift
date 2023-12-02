@@ -8,11 +8,10 @@
 import Foundation
 import Starfish
 
-prefix operator ∘
+infix operator ∘
 
-public prefix func ∘<X, Y, Z>(_ tuple: ((Y) throws -> Z, (X) throws -> Y)) -> (X) throws -> Z
+public func ∘<X, Y, Z>(_ f: @escaping (Y) throws -> Z, _ g: @escaping (X) throws -> Y) -> (X) throws -> Z
 {
-    let (f, g) = tuple
     return atop(f, g)
 }
 
