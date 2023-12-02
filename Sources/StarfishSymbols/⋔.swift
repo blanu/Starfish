@@ -10,7 +10,7 @@ import Starfish
 
 prefix operator ⋔
 
-public prefix func ⋔<X, Y, Z>(_ tuple: ((Y, Y) -> Z, (X) -> Y, (X) -> Y)) -> (X) -> Z
+public prefix func ⋔<X, Y, Z>(_ tuple: ((Y, Y) throws -> Z, (X) throws -> Y, (X) throws -> Y)) -> (X) throws -> Z
 {
     let (f, g, h) = tuple
     return fork(f, g, h)

@@ -218,11 +218,11 @@ public func under<S, T, U>(_ f: @escaping (BigArray<T>, BigArray<T>) -> BigArray
     return {xs, ys in ung(f(g(xs), g(ys)))}
 }
 
-public func fork<X, Y, Z>(_ f: @escaping (Y, Y) -> Z, _ g: @escaping (X) -> Y, _ h: @escaping (X) -> Y) -> (X) -> Z
+public func fork<X, Y, Z>(_ f: @escaping (Y, Y) throws -> Z, _ g: @escaping (X) throws -> Y, _ h: @escaping (X) throws -> Y) -> (X) throws -> Z
 {
     return {
         (x: X) -> Z in
 
-        return f(g(x), h(x))
+        return try f(try g(x), try h(x))
     }
 }
