@@ -9,6 +9,9 @@ import Foundation
 
 import Starfish
 
+prefix operator ⟝
+prefix operator ⟞
+
 infix operator →
 infix operator ⇢
 
